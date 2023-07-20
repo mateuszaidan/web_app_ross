@@ -6,7 +6,7 @@ import os
 
 
 #loading data
-model = pickle.load(open('model/model_rossmann.pkl', 'rb'))
+model = pickle.load(open('model/xgb_result.pkl', 'rb'))
 
 
 app = Flask(__name__)
