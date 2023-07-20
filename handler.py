@@ -25,7 +25,7 @@ def rossmann_predict():
             test_raw = pd.DataFrame( test_json, columns = test_json[0].keys() )
 
     else:
-        return Reponse( '{}', status = 200, mimetype = 'application\json')
+        return Response( '{}', status = 200, mimetype = 'application\json')
     
     #instantiate Rossmann Class 
     pipeline = Rossmann()
@@ -48,4 +48,5 @@ def rossmann_predict():
     
     
 if __name__ ==  '__main__':
+    port = os.environ.get('PORT', 5000)
     app.run('0.0.0.0') 
